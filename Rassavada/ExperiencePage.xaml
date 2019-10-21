@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Rassavada.ExperiencePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="12*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" BackgroundColor="#0BBE22">
+                <forms:SvgCachedImage
+                    Margin="10,20,0,0"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="Shape.svg"
+                    VerticalOptions="Center">
+                    <forms:SvgCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="back" />
+                    </forms:SvgCachedImage.GestureRecognizers>
+                </forms:SvgCachedImage>
+                <forms:SvgCachedImage
+                    Margin="0,-30,10,0"
+                    HeightRequest="30"
+                    HorizontalOptions="End"
+                    Source="createexper.svg"
+                    VerticalOptions="Center">
+                    <forms:SvgCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="create" />
+                    </forms:SvgCachedImage.GestureRecognizers>
+                </forms:SvgCachedImage>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <CollectionView x:Name="PlaceCollectionView" Margin="0,0,0,10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="5*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout>
+                                    <Frame CornerRadius="60">
+                                        <Image Source="{Binding Picture}" />
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Address}" />
+                                    <Label Text="{Binding Details}" />
+                                </StackLayout>
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

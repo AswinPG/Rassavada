@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Rassavada.NoExperPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="12*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout BackgroundColor="#0BBE22"
+                         Grid.Row="0"
+                         >
+                <forms:SvgCachedImage Source="Shape.svg"
+                                      HorizontalOptions="StartAndExpand"
+                                      HeightRequest="20"
+                                      VerticalOptions="Center"
+                                      Margin="10,20,0,0"/>
+
+
+                <forms:SvgCachedImage Source="createexper.svg"
+                                      HorizontalOptions="EndAndExpand"
+                                      HeightRequest="30"
+                                      VerticalOptions="Center"
+                                      Margin="0,-30,10,0">
+                    <forms:SvgCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="createexperience"
+                                              NumberOfTapsRequired="1"/>
+                    </forms:SvgCachedImage.GestureRecognizers>
+                </forms:SvgCachedImage>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label Text="No experience yet added"
+                       Opacity=".5"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
