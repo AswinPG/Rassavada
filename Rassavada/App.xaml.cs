@@ -10,7 +10,13 @@ namespace Rassavada
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new NoExperPage());
+            MainPage = new NavigationPage(new NoExperPage())
+            {
+                BarBackgroundColor = Color.FromHex("#0BBE22"),
+
+
+            }
+                ;
         }
 
         protected override void OnStart()

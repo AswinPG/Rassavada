@@ -1,5 +1,4 @@
-﻿using Rg.Plugins.Popup.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace Rassavada
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NoExperPage : ContentPage
+    public partial class NoPackPage : ContentPage
     {
-        public NoExperPage()
+        public NoPackPage()
         {
             InitializeComponent();
         }
 
-       
         private async void Create(object sender, EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new SelectTypeof());
+            await Navigation.PushAsync(new AddPackagePage());
         }
     }
 }

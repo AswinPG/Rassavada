@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace Rassavada
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExperiencePage : ContentPage
+    public partial class AddPackagePage : ContentPage
     {
-        public ExperiencePage()
+        public AddPackagePage()
         {
             InitializeComponent();
 
@@ -89,19 +89,20 @@ namespace Rassavada
             PlaceCollectionView.ItemsSource = Places;
         }
 
-        private async void Create(object sender, EventArgs e)
-        {
-           await PopupNavigation.Instance.PushAsync(new SelectTypeof());
-        }
-
         private async void Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
 
-        private async void View(object sender, EventArgs e)
+        private async void PackagePageGo(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ViewExperPage());
+            await PopupNavigation.Instance.PushAsync(new Packagename());
+        }
+
+        private async void Create(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SelectTypeof());
         }
     }
+    
 }

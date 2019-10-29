@@ -16,5 +16,11 @@ namespace Rassavada
         {
             InitializeComponent();
         }
+
+        private void Swiped(object sender, SwipedEventArgs e)
+        {
+
+            Pictures.Source = "Mockpic.png";
+        }
     }
 }

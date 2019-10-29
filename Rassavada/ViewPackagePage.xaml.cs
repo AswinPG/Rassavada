@@ -1,5 +1,4 @@
-﻿using Rg.Plugins.Popup.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Rassavada
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExperiencePage : ContentPage
+    public partial class ViewPackagePage : ContentPage
     {
-        public ExperiencePage()
+        public ViewPackagePage()
         {
             InitializeComponent();
-
             List<Exper> Places = new List<Exper>
             {
                 new Exper
@@ -88,20 +86,6 @@ namespace Rassavada
             };
             PlaceCollectionView.ItemsSource = Places;
         }
-
-        private async void Create(object sender, EventArgs e)
-        {
-           await PopupNavigation.Instance.PushAsync(new SelectTypeof());
-        }
-
-        private async void Back(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
-        private async void View(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ViewExperPage());
-        }
     }
+    
 }
