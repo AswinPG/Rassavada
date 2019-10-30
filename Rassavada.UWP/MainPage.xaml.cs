@@ -21,7 +21,7 @@ namespace Rassavada.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Rassavada.App());
+            LoadApplication(new global::Rassavada.Rassavada());
         }
     }
 }
