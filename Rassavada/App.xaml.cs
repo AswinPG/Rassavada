@@ -10,7 +10,7 @@ namespace Rassavada
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Home.HomePage();
         }
 
         protected override void OnStart()
