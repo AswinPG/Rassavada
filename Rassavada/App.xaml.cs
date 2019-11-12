@@ -10,7 +10,7 @@ namespace Rassavada
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Home.HomePage())
+            MainPage = new NavigationPage(new AddExperPage())
             {
                 BarBackgroundColor = Color.FromHex("#0BBE22"),
             };

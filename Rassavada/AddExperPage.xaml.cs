@@ -45,12 +45,14 @@ namespace Rassavada
         {
             Option.Text = "Seasonal";
             Option.TextColor = Color.FromHex("#000000");
+            Season.IsVisible = false;
         }
 
         private void Nonseasonal(object sender, EventArgs e)
         {
             Option.Text = "Non-Seasonal";
             Option.TextColor = Color.FromHex("#000000");
+            Season.IsVisible = false;
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

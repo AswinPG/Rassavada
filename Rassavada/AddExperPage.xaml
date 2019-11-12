@@ -31,12 +31,13 @@
                             HorizontalOptions="End"
                             Source="question.svg"
                             VerticalOptions="Center">
-                            <forms:SvgCachedImage.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Quest" />
-                            </forms:SvgCachedImage.GestureRecognizers>
                         </forms:SvgCachedImage>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Quest" />
+
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <StackLayout x:Name="Question" IsVisible="False">
+                    <Frame CornerRadius="2" BackgroundColor="#E3F5FF" BorderColor="#7ED1FF" HasShadow="False" IsVisible="False" Padding="10" Margin="0,0,10,10" x:Name="Question">
                         <Label Text="Lorem ipsum dolor sit amet, consectetur adip isc ing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad imniamnon.">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
@@ -46,10 +47,11 @@
 
                         </Label>
 
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="White">
                         <forms:SvgCachedImage
                             HeightRequest="20"
+                            WidthRequest="20"
                             HorizontalOptions="Start"
                             Source="place.svg"
                             VerticalOptions="Center" />
@@ -120,11 +122,10 @@
                     </StackLayout>
                     <Entry />
 
-                    <Frame Margin="5,10,10,10" CornerRadius="5">
+                    <Frame Margin="5,10,10,10" CornerRadius="2" Padding="5" HasShadow="False" BorderColor="#D9E2E6">
                         <StackLayout>
                             <StackLayout
                                 x:Name="Seasonal"
-                                HeightRequest="50"
                                 Orientation="Horizontal">
                                 <Label
                                     x:Name="Option"
@@ -150,17 +151,20 @@
                                 </StackLayout.GestureRecognizers>
                             </StackLayout>
                             <StackLayout
+                                Padding="20,0,20,10"
                                 x:Name="Season"
                                 IsVisible="False"
                                 Spacing="10">
-                                <StackLayout>
+                                <StackLayout Margin="0,10,0,10">
                                     <Label HorizontalOptions="StartAndExpand" Text="Seasonal" />
+                                    
+                                    
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Seasonaltype" />
                                     </StackLayout.GestureRecognizers>
 
                                 </StackLayout>
-                                <StackLayout>
+                                <StackLayout Margin="0,10,0,10">
                                     <Label HorizontalOptions="StartAndExpand" Text="Non-Seasonal" />
 
 
@@ -176,7 +180,6 @@
                     <forms:SvgCachedImage
                         Margin="0,10,10,10"
                         Aspect="AspectFill"
-                        HeightRequest="47"
                         Source="addaphoto.svg">
                         <forms:SvgCachedImage.GestureRecognizers>
                             <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
@@ -198,12 +201,14 @@
                             HorizontalOptions="End"
                             Source="question.svg"
                             VerticalOptions="Center">
-                            <forms:SvgCachedImage.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Reviewquest" />
-                            </forms:SvgCachedImage.GestureRecognizers>
+                            
                         </forms:SvgCachedImage>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Reviewquest" />
+
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
-                    <StackLayout x:Name="Questions" IsVisible="False">
+                    <Frame CornerRadius="2" BackgroundColor="#E3F5FF" BorderColor="#7ED1FF" HasShadow="False" IsVisible="False" Padding="10" Margin="0,0,0,10" x:Name="Questions">
                         <Label Text="Lorem ipsum dolor sit amet, consectetur adip isc ing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad imniamnon.">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
@@ -213,7 +218,7 @@
 
                         </Label>
 
-                    </StackLayout>
+                    </Frame>
                     <Entry FontSize="Small" Placeholder="What's your opinion about this place?">
                         <Entry.FontFamily>
                             <OnPlatform x:TypeArguments="x:String">
