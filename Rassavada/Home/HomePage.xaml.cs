@@ -16,5 +16,24 @@ namespace Rassavada.Home
         {
             InitializeComponent();
         }
+
+        private void Expadded_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ExperiencePage());
+
+        }
+        private void Pkgcrtd_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PackagePage());
+
+        }
+        private void Compro_Tapped(object sender, EventArgs e)
+        {
+
+        }
+        private void Secset_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }
