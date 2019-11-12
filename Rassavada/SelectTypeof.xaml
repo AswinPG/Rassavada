@@ -10,8 +10,9 @@
     mc:Ignorable="d">
 
     <pages:PopupPage.Content>
+        
         <StackLayout
-            Margin="20,0,20,0"
+            Margin="30,0,30,0"
             BackgroundColor="White"
             HorizontalOptions="Center"
             Orientation="Vertical"
