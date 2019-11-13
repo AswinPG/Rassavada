@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              x:Class="Rassavada.PackagePage">
     <NavigationPage.TitleView>
-        <AbsoluteLayout>
+        <Grid Margin="0,0,10,0">
             
             <Image
                 HorizontalOptions="End"
@@ -18,7 +18,7 @@
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Create" />
                 </Image.GestureRecognizers>
             </Image>
-        </AbsoluteLayout>
+        </Grid>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
@@ -31,6 +31,9 @@
                         <Frame HasShadow="True">
 
                             <Grid Padding="0,0,0,10">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Grid.GestureRecognizers>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="50" />
                                 </Grid.RowDefinitions>

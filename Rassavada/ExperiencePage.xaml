@@ -12,15 +12,8 @@
     NavigationPage.HasNavigationBar="True"
     mc:Ignorable="d">
     <NavigationPage.TitleView>
-        <AbsoluteLayout>
-            <forms:SvgCachedImage
-                HorizontalOptions="Start"
-                Source="Shape.svg"
-                VerticalOptions="Center">
-                <forms:SvgCachedImage.GestureRecognizers>
-                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back" />
-                </forms:SvgCachedImage.GestureRecognizers>
-            </forms:SvgCachedImage>
+        <Grid Margin="0,0,10,0">
+           
             <Image
                 HorizontalOptions="End"
                 Source="addpng.png"
@@ -29,12 +22,12 @@
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Create" />
                 </Image.GestureRecognizers>
             </Image>
-        </AbsoluteLayout>
+        </Grid>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
 
-        <ScrollView>
+        <ScrollView Padding="0,0,0,20">
             <CollectionView x:Name="PlaceCollectionView">
                 <CollectionView.GestureRecognizers>
                     <TapGestureRecognizer Tapped="View"
@@ -45,6 +38,9 @@
                         <Frame HasShadow="True">
 
                             <Grid Padding="0,0,0,10">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Grid.GestureRecognizers>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="50" />
                                 </Grid.RowDefinitions>
