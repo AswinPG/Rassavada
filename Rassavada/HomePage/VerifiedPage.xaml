@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Rassavada.VerifiedPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#E5E5E5"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Image
+                    Source="MaskGroup.png"
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="350" />
+            </StackLayout>
+            <StackLayout
+                BackgroundColor="#E5E5E5"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <controls:CircleImage
+                    Aspect="AspectFill"
+                    BackgroundColor="#E5E5E5"
+                    BorderColor="#54CD63"
+                    BorderThickness="2.5"
+                    HeightRequest="80"
+                    Source=""
+                    WidthRequest="81" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="Stan Marton"
+                    TextColor="#121212" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Poppins-Medium.ttf" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label
+                    FontSize="12"
+                    HorizontalOptions="Center"
+                    Text="Local Guide Level 0"
+                    VerticalOptions="Center" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Poppins-Regular.ttf" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <StackLayout Margin="0,60,0,0" BackgroundColor="#E5E5E5">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HorizontalOptions="End"
+                        Text="100 points &gt;"
+                        TextColor="#000000" />
+                    <ProgressBar
+                        x:Name="progbar"
+                        BackgroundColor="#E5E5E5"
+                        HeightRequest="15"
+                        Progress="0.3"
+                        ProgressColor="#8D05F8"
+                        WidthRequest="280" />
+                    <StackLayout Orientation="Horizontal" Spacing="280">
+                        <Label
+                            x:Name="Points"
+                            HorizontalOptions="Start"
+                            Text="75"
+                            TextColor="#000000" />
+                        <Label
+                            HorizontalOptions="End"
+                            Text="250"
+                            TextColor="#000000" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <forms:SvgCachedImage HeightRequest="30" Source="Group176.svg" />
+            <StackLayout />
+            <BoxView
+                Margin="0,15,0,0"
+                HeightRequest="1"
+                IsVisible="True"
+                Color="#EFEFEF" />
+
+            <Grid Margin="5,25,5,0" ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+
+                    <ColumnDefinition Width="40*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0">
+                    <forms:SvgCachedImage HeightRequest="70" Source="Group187.svg" />
+                </StackLayout>
+                <StackLayout Grid.Column="1">
+                    <forms:SvgCachedImage HeightRequest="70" Source="Group188.svg" />
+
+                </StackLayout>
+                <StackLayout Grid.Column="2">
+                    <forms:SvgCachedImage HeightRequest="70" Source="Group189.svg" />
+
+                </StackLayout>
+                <StackLayout Grid.Column="3">
+                    <forms:SvgCachedImage HeightRequest="70" Source="Group190.svg" />
+
+                </StackLayout>
+            </Grid>
+
+            <StackLayout
+                Margin="40"
+                HorizontalOptions="Center"
+                VerticalOptions="End">
+                <forms:SvgCachedImage HeightRequest="70" Source="Group 186.svg" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

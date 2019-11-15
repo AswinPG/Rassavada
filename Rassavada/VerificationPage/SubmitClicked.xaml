@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Rassavada.SubmitClicked"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#E5E5E5"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout
+                Margin="10,20,0,0"
+                Orientation="Horizontal"
+                Spacing="25">
+                <forms:SvgCachedImage
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="Shape.svg"
+                    VerticalOptions="Center">
+                    <forms:SvgCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Backto" />
+                    </forms:SvgCachedImage.GestureRecognizers>
+                </forms:SvgCachedImage>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="22"
+                    Text="Verification"
+                    TextColor="#131313">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Poppins-Medium.ttf" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <StackLayout Margin="0,35,0,0">
+                <forms:SvgCachedImage
+                    HeightRequest="65"
+                    Source="Group179.svg"
+                    WidthRequest="90" />
+            </StackLayout>
+            <StackLayout
+                BackgroundColor="#E5E5E5"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <controls:CircleImage
+                    Margin="0,30,0,0"
+                    Aspect="AspectFill"
+                    BackgroundColor="#E5E5E5"
+                    BorderColor="#54CD63"
+                    BorderThickness="2.5"
+                    HeightRequest="80"
+                    Source=""
+                    WidthRequest="81" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="Stan Marton"
+                    TextColor="#121212" />
+                <Label
+                    FontSize="12"
+                    HorizontalOptions="Center"
+                    Text="stanmarton124@gmail.com"
+                    VerticalOptions="Center" />
+            </StackLayout>
+            <BoxView
+                Margin="0,15,0,0"
+                HeightRequest="1"
+                IsVisible="True"
+                Color="#EFEFEF" />
+
+            <StackLayout Margin="60,20,90,0">
+
+
+                <StackLayout>
+                    <Label
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="You will have to wait for 24 hrs until  your account gets verified" />
+                </StackLayout>
+
+
+                <StackLayout>
+                    <Image
+                        HeightRequest="250"
+                        HorizontalOptions="FillAndExpand"
+                        Source="Smartobj.jpg"
+                        WidthRequest="400" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
