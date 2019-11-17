@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Rassavada.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#E5E5E5"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="#0BBE22" IsVisible="True">
+                <forms:SvgCachedImage
+                    Margin="10,20,0,20"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="Shape.svg"
+                    VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout
+                Margin="0,5,0,0"
+                BackgroundColor="#E5E5E5"
+                HorizontalOptions="Center"
+                Spacing="10"
+                VerticalOptions="Center">
+                <controls:CircleImage
+                    Margin="10,30,0,0"
+                    Aspect="AspectFill"
+                    BackgroundColor="#E5E5E5"
+                    BorderColor="#54CD63"
+                    BorderThickness="2.5"
+                    HeightRequest="95"
+                    Source=""
+                    WidthRequest="81" />
+                <forms:SvgCachedImage
+                    Margin="10,10,0,0"
+                    HeightRequest="27"
+                    HorizontalOptions="Start"
+                    Source="editProPic.svg"
+                    VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Margin="0,20,0,0" Spacing="27">
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="5">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Full Name"
+                            TextColor="#131313">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Email"
+                            TextColor="#131313">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Phone Number"
+                            TextColor="#131313">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Address"
+                            TextColor="#131313">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout Margin="40,40,40,0">
+                <forms:SvgCachedImage
+                    HeightRequest="70"
+                    HorizontalOptions="Center"
+                    Source="saveGradient.svg"
+                    VerticalOptions="End" />
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

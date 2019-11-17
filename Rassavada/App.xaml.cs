@@ -12,7 +12,7 @@ namespace Rassavada
 
             MainPage = new NavigationPage(new Home.HomePage())
             {
-                BarBackgroundColor = Color.FromHex("#0BBE22"),
+              
             };
                 
         }

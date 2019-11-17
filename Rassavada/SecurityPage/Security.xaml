@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Rassavada.SecurityPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="#0BBE22" IsVisible="True">
+                <forms:SvgCachedImage
+                    Margin="10,20,0,20"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="Shape.svg"
+                    VerticalOptions="Center" />
+            </StackLayout>
+            <Image
+                Margin="20"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="security.png"
+                WidthRequest="250" />
+            <StackLayout Margin="10" Spacing="30">
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Current Password"
+                            TextColor="#8D8D8D">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+
+                    </StackLayout>
+
+                </Grid>
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="New Password"
+                            TextColor="#8D8D8D">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="25,0,25,0">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50" />
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Confirm Password"
+                            TextColor="#8D8D8D">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Poppins-Regular.ttf" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <Entry
+                            Opacity="0.5"
+                            Text=""
+                            TextColor="#000000" />
+                    </StackLayout>
+
+                </Grid>
+                <StackLayout
+                    Margin="40"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End">
+                    <forms:SvgCachedImage HeightRequest="70" Source="saveGradient.svg" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
+
