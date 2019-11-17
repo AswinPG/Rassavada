@@ -11,7 +11,7 @@
     NavigationPage.HasBackButton="False"
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
-    <ContentPage.Content>
+    <!--<ContentPage.Content>
 
         <StackLayout>
             <StackLayout>
@@ -308,7 +308,7 @@
                 </StackLayout>
 
             </ScrollView>
-            <!--<Frame
+            --><!--<Frame
                                 BorderColor="#E5E5E5"
                                 CornerRadius="10"
                                 HeightRequest="25">
@@ -324,10 +324,10 @@
 
                 </Picker.Items>
             </Picker>
-        </Frame>-->
+        </Frame>--><!--
         </StackLayout>
 
 
-    </ContentPage.Content>
+    </ContentPage.Content>-->
 </ContentPage>
 
